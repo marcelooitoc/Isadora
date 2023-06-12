@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<style>
+    body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #FF94C2, #FFC3A0);
+    text-align: center;
+    padding-top: 50px;
+}
+h1 {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    color: #FF4081;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #666;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #FF4081;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+button:hover {
+    background-color: #E91E63;
+    
+}
+
+h2 {
+    padding-bottom: 50px;
+}
+.container {
+    text-align: center;
+    width: 400px;
+    margin: 0 auto;
+    background-color: #FFF;
+    margin-top: 80px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.response {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #FF4081;
+}
+.heart {
+    color: #FF4081;
+}
+.hidden {
+    display: none;
+}
+.buttonp{
+    padding-bottom: 20px;
+    margin: 0 auto;
+    border: solid;
+}
+</style>
+
+<head>
+    <title>IMPORTANTE!</title>
+    <script>
+        var clickCount = 0;
+
+        function showNextPage() {
+            const currentPage = document.querySelector('.page:not(.hidden)');
+            const nextPage = currentPage.nextElementSibling;
+            currentPage.classList.add('hidden');
+            nextPage.classList.remove('hidden');
+        }
+
+        function showFinalPage() {
+            const currentPage = document.querySelector('.page:not(.hidden)');
+            currentPage.classList.add('hidden');
+            const finalPage = document.getElementById('finalPage');
+            finalPage.classList.remove('hidden');
+
+            // Reproduzir música apenas na última página
+            const backgroundMusic = document.getElementById('backgroundMusic');
+            backgroundMusic.play();
+        }
+
+        function showInvalidOptionMessage() {
+            alert("Tu sabe que essa opção não vale!");
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="page1" class="page pg">
+            <h1>ATENÇÃO, ATENÇÃO!</h1>
+            <p>Prossiga apenas se estiver com saudade!</p>
+            <button onclick="showNextPage()">Próximo</button>
+        </div>
+
+        <div id="page2" class="page hidden">
+            <h1>ATENÇÃO, ATENÇÃO!</h1>
+            <p>Ontem tu me disse uma coisa que não sai da minha cabeça.</p>
+            <p>Me disse que nunca passou um Dia dos Namorados namorando, lembra?</p>
+            <p>Já é algo que eu tenho pensando em fazer, mas ainda não tinha certeza de qual seria a tua reação.</p>
+            <p>Porém esses dias que tenho passado contigo foram me mostrando o que deve passar por essa tua
+                cabecinha.</p>
+            <button onclick="showNextPage()">Próximo</button>
+        </div>
+
+        <div id="page3" class="page hidden pg">
+            <h1>ATENÇÃO, ATENÇÃO!</h1>
+            <p>Queria olhar bem nesses teus olhinhos verdes antes de dizer isso, bolar algo melhor e fazer pessoalmente
+                amanhã, mas como não iremos nos ver por enquanto, fiquei
+                sem muitas opções e não queria deixar tu ir sem antes te dizer isso.</p>
+            <button onclick="showNextPage()">Próximo</button>
+        </div>
+
+        <div id="page2" class="page hidden">
+            <h1>Então</h1>
+            <p>Sei que foi tudo bem brega, mas</p>
+            <p>sobre esse e até quem sabe os próximos dias dos namorados... gostaria de passar comigo?</p>
+            <button onclick="showNextPage()">Próximo</button>
+        </div>
+
+        <div id="page2" class="page hidden">
+            <h1>Aceitaria esse singelo pedido virtual, porém sincero desse nobre rapaz?</h1>
+            <h2>Quer namorar comigo?</h2>
+            <p><button onclick="showInvalidOptionMessage()">Não! 😢</button></p>
+            <p><button onclick="showFinalPage()">Sim!! ❤️</button></p>
+            <p><button onclick="showFinalPage()">Claro!!!!!!! ❤️❤️</button></p>
+            <p><button class="buttonp" onclick="showFinalPage()">Óbvio que sim!!!!!!!!!!! 🥰🥰🥰</button></p>
+        </div>
+
+        <div id="finalPage" class="page hidden">
+            <h1 class="response heart">Você fez a melhor escolha!
+                ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
+            </h1>
+        </div>
+    </div>
+    <audio id="backgroundMusic" src="./eu/iwerp.mp3" loop></audio>
+</body>
+
+</html>
